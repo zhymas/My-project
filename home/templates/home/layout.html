@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,11 +7,24 @@
         <title>{% block title %}{% endblock %}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <script src="" async defer></script>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://kit.fontawesome.com/49151ea818.js" crossorigin=""></script>
     </head>
     <body>
-        <p>{% block p %}{% endblock %}</p>
-        
+    <h1 class="main-text">{% block main-text %}{% endblock %}</h1>
+    <aside>
+        <img src="{% static 'img/1042680.png' %}" alt=logo">
+        <div class="links">
+            <h3>NEWS</h3>
+            <a id="home" href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i>Home</li></a>
+            <a id="about" href="{% url 'about' %}"><li><i class="fa-solid fa-circle-info"></i>About us</li></a>
+            <a id="contacts" href="{% url 'contacts' %}"><li><i class="fa-solid fa-address-book"></i>Contact</li></a>
+        </div>
+    </aside>
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+
     </body>
 </html>

@@ -1,0 +1,47 @@
+body{
+    background: #2c2c2c;
+}
+aside{
+    position: relative;
+    background: #181818;
+    bottom: 25px;
+    height: 95px;
+    width: 1440px;
+    right: 10px;
+    border-bottom: 5px solid #4d4d4d;
+    color: white;
+
+}
+a{
+    text-decoration-line: none;
+}
+
+aside img{
+    position: relative;
+    width: 65px;
+    top: 20px;
+
+
+}
+aside h3{
+    position: relative;
+    bottom: 47px;
+    left: 80px;
+}
+
+
+aside a li{
+    display: inline;
+    position: relative;
+    font-size: 20px;
+    bottom: 90px;
+    left: 150px;
+    margin-left: 50px;
+    color: white;
+    transition: transform .6s ease; ;
+}
+
+aside a li:hover{
+    color: #eb5959;
+    transform: scale(1.02);
+}
