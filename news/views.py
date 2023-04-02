@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Article
 from .forms import ArticleForm
 from django.views.generic import DetailView
+import django
 
 def news_home(request):
     news = Article.objects.order_by('-date')
