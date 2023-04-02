@@ -4,8 +4,19 @@
 
 {% block main %}
     <div class="news_main">
-        <h1>News</h1>
-        {{ news }}
+        {% if news %}
+            <h1 class="news-news">News on page</h1>
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3 class="title-news">{{ el.title }}</h3>
+                    <p class="anons-news">{{ el.anons }}</p>
+                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">More</a>
+                </div>
+
+            {% endfor %}
+        {% else %}
+            <p>Noting in news</p>
+        {% endif %}
 
     </div>
 {% endblock %}
