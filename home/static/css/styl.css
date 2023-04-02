@@ -5,11 +5,11 @@ html{
     overflow-x: hidden;
 }
 body{
-    background: #2c2c2c;
+    background: dimgrey;
 }
 aside{
     position: relative;
-    background: #181818;
+    background: darkslategrey;
     bottom: 25px;
     height: 95px;
     width: 1450px;
@@ -87,6 +87,9 @@ form{
 }
 
 #error{
+    color: white;
+}
+p{
     color: white;
 }
 
