@@ -4,8 +4,8 @@ from .forms import ArticleForm
 from django.views.generic import DetailView, UpdateView, DeleteView
 
 def news_home(request):
-    news = Article.objects.order_by('-date')
-    return render(request, 'news/news_home.html', {"news": news})
+    news = Article.objects.order_by('date')
+    return render(request, 'news/news_home.html', {'news': news})
 
 class NewsDetailView(DetailView):
     model = Article
@@ -21,8 +21,6 @@ class NewsDeleteView(DeleteView):
     model = Article
     success_url = '/%2Fnews'
     template_name = 'news/news-delete.html'
-
-
 
 def create(request):
     error = ""
