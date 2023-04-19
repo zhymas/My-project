@@ -1,16 +1,17 @@
 {% extends 'home/layout.html' %}
 
-{% block title %} Page for add news {% endblock %}
+{% block title %} Page for update news {% endblock %}
 
 {% block main %}
     <div class="features">
-        <h1 id="h1-form">Form for add news</h1>
+        <h1 id="h1-form">Form for update news</h1>
         <form method="post">
             {% csrf_token %}
-            {{ form.title }}<br>
-            {{ form.anons }}<br>
-            {{ form.full_text }}<br>
-            {{ form.date }}<br>
+{#            {{ form.title }}<br>#}
+{#            {{ form.anons }}<br>#}
+{#            {{ form.full_text }}<br>#}
+{#            {{ form.date }}<br>#}
+            {{ form.as_p }}
             <p>hint, the date should be written like this (2019-4-2 19:00:00)</p>
             <button id="button-add" class="btn btn-warning" type="submit">Update</button>
             <span id="error">{{ error }}</span>
